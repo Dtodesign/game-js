@@ -48,7 +48,7 @@ function gameFinished(tie) {
     if (tie) {
         winDrawText.innerHTML = 'Tie Game!';
     }else  {
-        winDrawText.innerHTML = `<strong>${oTurn ? "〇" : "✘"} is the winner!</strong>`;
+        winDrawText.innerHTML = `<strong> Winner is ${oTurn ? "〇" : "✘"} !</strong>`;
     }
     winDrawModal.classList.add('displayModal');
 }
