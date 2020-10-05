@@ -45,7 +45,7 @@ h1 {
 }
 .cell.x,
 .cell.o {
-  cursor: default;
+  cursor: no-drop;
 }
 
 .cell.x::before,
