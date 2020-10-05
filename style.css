@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    font-family: 'Architects Daughter', cursive;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background-color: #4f5d75;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #43aa8b;
+    font-size: 67px;
+
+}
+
+.game-Board {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 50px;
+}
+
+.cell {
+    background-color: #bfc0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+}
+.cell.x,
+.cell.o {
+  cursor: default;
+}
+
+.cell.x::before,
+.cell.x::after,
+.game-Board.x .cell:not(.x):not(.o):hover::before,
+.game-Board.x .cell:not(.x):not(.o):hover::after {
+  content: '✗';
+  font-size: 140px;
+  position: absolute;
+  color: #ffbe0b;
+}
+
+.cell.o::before,
+.cell.o::after,
+.game-Board.o .cell:not(.x):not(.o):hover::before,
+.game-Board.o .cell:not(.x):not(.o):hover::after {
+  content: '〇';
+  color: #f3722c;
+  position: absolute;
+  font-size: 130px;
+}
+
+
+.win-draw-modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #fef9efa6;
+    justify-content: center;
+    align-items: center;
+    /* color: aliceblue; */
+    font-size: 44px;
+    flex-direction: column;
+    /* display: flex;  */
+
+}
+.win-draw-modal.displayModal{
+    display: flex;
+    color: #fe5d26;
+}
+
+.win-draw-modal button {
+    margin-top: 50px;
+    font-size: 33px;
+    color: #bfc0c0;
+    background-color: #2d3142;
+    border: 0px;
+    padding: .25em .5em;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.game-Board.x .cell:not(.x):not(.o):hover::before,
+.game-Board.x .cell:not(.x):not(.o):hover::after,
+.game-Board.o .cell:not(.x):not(.o):hover::before,
+.game-Board.o .cell:not(.x):not(.o):hover::after {
+  color: #d8d3be;
+}
+
+@media only screen and (max-width: 1024px) {
+    .game-Board{
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .x::after {
+      font-size: 20px;
+    }
+  
+    .o::after {
+      font-size: 50px;
+    }
+  }
+ 
