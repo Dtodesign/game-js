@@ -99,6 +99,10 @@ h1 {
     border-radius: 10px;
     font-family: 'Architects Daughter', cursive;
 }
+button:hover {
+  background-color: #16697a;
+  color: #ede7e3;
+}
 
 .game-Board.x .cell:not(.x):not(.o):hover::before,
 .game-Board.x .cell:not(.x):not(.o):hover::after,
