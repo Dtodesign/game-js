@@ -18,10 +18,12 @@ const winConditions = [
 const winDrawModal = document.getElementById('winDrawModal');
 const winDrawText = document.querySelector('[win-draw-text]');
 const resetB = document.getElementById('reset');
+const restartB = document.getElementById('btnRestart');
  
 gameStart();
 
 resetB.addEventListener('click',gameStart);
+restartB.addEventListener('click', gameStart);
 
 
 function handleClick(e) {

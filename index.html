@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,14 @@
     <script src="script.js" defer></script>
     <title>TicTacToeGame</title>
 </head>
+
 <body>
     <div class="container">
+
         <h1>Tic Tac Toe</h1>
+        <div class="center">
+            <button class="btn-restart" id="btnRestart">Restart</button>
+        </div>
         <div class="game-Board" id="gameBoard">
             <div class="cell" game-cell></div>
             <div class="cell" game-cell></div>
@@ -25,10 +31,11 @@
             <div class="cell" game-cell></div>
         </div>
     </div>
-    
+
     <div class="win-draw-modal" id="winDrawModal">
         <div class="text" win-draw-text></div>
-        <button id="reset">Reset Game</button>
+        <button calss="btnModal" id="reset">Reset Game</button>
     </div>
 </body>
+
 </html>
